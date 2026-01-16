@@ -1,0 +1,4 @@
+baseURL = 'https://yiye2014.github.io/'
+languageCode = 'en-us'
+title = '乙野的博客'
+theme='hugo-paper'
