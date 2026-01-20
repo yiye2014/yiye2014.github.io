@@ -1,0 +1,13 @@
+/* 基础选中效果：加粗并改变颜色 */
+.menu a.active, 
+.menu a[aria-current="page"] {
+    font-weight: bold;
+    color: #000; /* 或者你喜欢的颜色，如 #2563eb */
+    border-bottom: 2px solid #000; /* 添加下划线指示 */
+}
+
+/* 鼠标悬停时的平滑过渡 */
+.menu a:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}

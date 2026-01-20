@@ -2,3 +2,24 @@ baseURL = 'https://yiye2014.github.io/'
 languageCode = 'en-us'
 title = '乙野的博客'
 theme='hugo-paper'
+
+[[menu.main]]
+    name = '首页'
+    url = '/'
+    weight = 10
+
+[[menu.main]]
+    name = '小说'
+    url = '/noval/'
+    weight = 20
+
+[[menu.main]]
+    name = '游记'
+    url = '/article/'
+    weight = 30
+
+    # 在 hugo.toml 的 [params] 下添加
+[params]
+    # 告诉 Hugo 哪些文件夹的内容属于“主内容区”，会在首页列出
+    mainSections = ["article", "noval"]
+    customCSS = ["css/custom.css"]
