@@ -1,13 +1,20 @@
-/* 基础选中效果：加粗并改变颜色 */
-.menu a.active, 
-.menu a[aria-current="page"] {
-    font-weight: bold;
-    color: #000; /* 或者你喜欢的颜色，如 #2563eb */
-    border-bottom: 2px solid #000; /* 添加下划线指示 */
+/* 1. 基础状态：稍微降低非选中项的透明度 */
+.nav a {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
-/* 鼠标悬停时的平滑过渡 */
-.menu a:hover {
-    opacity: 0.7;
-    transition: opacity 0.2s;
+/* 2. 悬停状态：增强对比度 */
+.nav a:hover {
+    opacity: 1;
+}
+
+/* 3. 选中状态（关键）：加粗并显示下划线 */
+/* Hugo-Paper 默认会根据路径匹配，你可以利用下面的 class 钩子 */
+.nav a[aria-current="page"], 
+.nav a.active {
+    opacity: 1;
+    font-weight: 600;
+    border-bottom: 2px solid #000; /* 经典的极简下划线 */
+    padding-bottom: 2px;
 }
